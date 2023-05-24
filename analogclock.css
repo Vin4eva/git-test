@@ -1,0 +1,132 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.clock{
+    width: 350px;
+    height: 350px;
+    border: 5px solid silver;
+    border-radius: 50%;
+    color: white;
+    background-color: darkgreen;
+    position: relative;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.signature{
+    font-size: 0.5rem;
+    font-weight: normal;
+    color: silver;
+    letter-spacing: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: 70px;
+    right: 40%;
+    transform: translateY(-40%);
+    display: inline;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    z-index: 2 ;
+}
+
+.numbers div{
+    position: absolute;
+}
+
+.numbers .twelve{
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.numbers .six{
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.numbers .three{
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.numbers .nine{
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.hands{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.hands::before{
+    content:"";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: silver;
+    z-index: 10;
+
+}
+
+.hands div{
+    width: 7px;
+    height: 100px;
+    position: absolute;
+    transform-origin: bottom center;
+    bottom: 50%;
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+    z-index: 4;
+} 
+
+.hands .hour{
+    height: 90px;
+    background-color: gold;
+    transform: rotate(40deg);
+   
+
+}
+
+.hands .minute{
+    height: 110px;
+    width: 4px;
+    background-color: gold;
+    transform: rotate(240deg);
+
+}
+
+.hands .second{
+    width:  2px;
+    height: 140px;
+    background-color: black;
+    transform: rotate(120deg);
+    z-index: 6;
+
+}
+ 
